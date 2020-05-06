@@ -24,13 +24,13 @@ services:
     volumes:
       - /volumes/redis:/data
 #optionally uncomment if you wish to use nginx as a frontend
- nginx:
-   restart: always
-   image: jwilder/nginx-proxy
-   ports:
-    - "8321:80"
-   volumes:
-    - /var/run/docker.sock:/tmp/docker.sock:ro
+  nginx:
+    restart: always
+    image: jwilder/nginx-proxy
+    ports:
+     - "8321:80"
+    volumes:
+     - /var/run/docker.sock:/tmp/docker.sock:ro
 # optionally uncomment if you wish to use postgresql as a db
   postgresql:
     restart: always
